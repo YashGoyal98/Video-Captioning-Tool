@@ -1,0 +1,31 @@
+.caption-form-container {
+    background-color: #f44336;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.caption-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timestamp-input {
+    display: flex;
+    gap: 5px;
+}
+
+.textarea {
+    width: 100px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}

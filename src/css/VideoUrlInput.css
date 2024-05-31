@@ -1,0 +1,10 @@
+.video-url-input {
+    background-color: #ff9800;
+    padding: 10px;
+    margin: 50px 0;
+    width: 50px;
+}
+
+.error {
+    color: red;
+}
