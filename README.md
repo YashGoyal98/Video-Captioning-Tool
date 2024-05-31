@@ -1,6 +1,6 @@
 # To Run the React App
 
-##NodeJs Installation
+## NodeJs Installation
 Link : https://nodejs.org/en/learn/getting-started/how-to-install-nodejs
 
 ## Available Scripts
