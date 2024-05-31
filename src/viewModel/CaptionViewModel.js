@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import {formatTimestamp} from "../Utility/utility";
+import {formatTimestamp} from "../utility/utility";
 
 const useCaptionViewModel = () => {
     const [videoUrl, setVideoUrl] = useState('');

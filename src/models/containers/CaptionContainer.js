@@ -1,6 +1,6 @@
 import React from 'react';
-import CaptionForm from '../Components/CaptionForm';
-import CaptionList from '../Components/CaptionList';
+import CaptionForm from '../components/CaptionForm';
+import CaptionList from '../components/CaptionList';
 
 const CaptionContainer = ({ captions, onAddCaption, onDeleteCaption, vttUrl ,disabled,maxDuration}) => (
     <div>

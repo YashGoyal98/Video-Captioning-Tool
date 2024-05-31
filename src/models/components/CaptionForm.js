@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CustomTimestampInput from '../Containers/CustomTimestampInput';
+import CustomTimestampInput from '../containers/CustomTimestampInput';
 import  '../../css/CaptionForm.css';
 
 

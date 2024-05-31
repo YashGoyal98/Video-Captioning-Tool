@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoPlayer from '../Components/VideoPlayer';
+import VideoPlayer from '../components/VideoPlayer';
 
 const VideoContainer = ({ videoUrl, vttUrl,onLoadedMetadata}) => (
     videoUrl && (
