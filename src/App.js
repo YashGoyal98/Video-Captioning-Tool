@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './css/App.css';
+import React, { useState } from 'react';
+import VideoUrlInput from './models/components/VideoUrlInput';
+import CaptionContainer from './models/containers/CaptionContainer';
+import useCaptionViewModel from './viewModel/CaptionViewModel';
+import VideoContainer from "./models/containers/VideoContainer";
 
 function App() {
+  const [videoDuration, setVideoDuration] = useState(0);
+  const {
+    videoUrl,
+    captions,
+    vttUrl,
+    handleAddCaption,
+    handleDeleteCaption,
+    handleVideoUrlChange,
+  } = useCaptionViewModel();
+
+  const handleLoadedMetadata = (duration) => {
+    setVideoDuration(duration);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <h1>Video Captioning Tool</h1>
+        <VideoUrlInput videoUrl={videoUrl} onUrlChange={handleVideoUrlChange} />
+        <VideoContainer videoUrl={videoUrl} vttUrl={vttUrl} onLoadedMetadata={handleLoadedMetadata} />
+        <CaptionContainer
+            captions={captions}
+            onAddCaption={handleAddCaption}
+            onDeleteCaption={handleDeleteCaption}
+            vttUrl={vttUrl}
+            maxDuration={videoDuration}
+            disabled={!videoUrl}
+        />
+      </div>
   );
 }
 
