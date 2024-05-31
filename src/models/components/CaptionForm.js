@@ -13,8 +13,8 @@ const CaptionForm = ({ onAddCaption, disabled, maxDuration }) => {
     const [errorText,setErrorText] = useState('')
     const handleSubmit = (event) => {
         event.preventDefault();
-        const start = startTimestamp.hours * 3600*1000 + startTimestamp.minutes * 60*1000 + startTimestamp.seconds*1000 + startTimestamp.milliseconds;
-        const end = endTimestamp.hours * 3600*1000 + endTimestamp.minutes * 60*1000 + endTimestamp.seconds*1000 + endTimestamp.milliseconds;
+        const start = startTimestamp.hours * 3600*1000 + startTimestamp.minutes * 60*1000 + startTimestamp.seconds*1000 + Number(startTimestamp.milliseconds);
+        const end = endTimestamp.hours * 3600*1000 + endTimestamp.minutes * 60*1000 + endTimestamp.seconds*1000 + Number(endTimestamp.milliseconds);
         if(text.length>MAX_CHAR_ALLOWED){
             setErrorText("Caption Text too long! Limit : 100 charachters");
 
@@ -38,7 +38,7 @@ const CaptionForm = ({ onAddCaption, disabled, maxDuration }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} disabled={disabled}>
+        <form onSubmit={handleSubmit} >
             <fieldset disabled={disabled}>
                 <div>
                     <label>Start Time:</label>
